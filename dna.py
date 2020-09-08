@@ -29,13 +29,13 @@ with open(argv[2] , "r") as dna_file :
 DNA_str_info_list = []
 
 for  i in range(1 , len(data)) :
-    DNA_str_info_list.append(str_count(in_dna,data[i][0]))
+    DNA_str_info_list.append(str_count(in_dna,data[0][i]))
     
 for j in range (1 , len(data[0]))    
     for p in range(len(data))
                  
         person_found = True
-        if(data[j][p + 1] != DNA_str_info_list[p]):
+        if(data[p + 1][j] != DNA_str_info_list[p]):
             person_found = False          
          
     if person_found == True :
